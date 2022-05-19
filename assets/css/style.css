@@ -1,0 +1,288 @@
+:root {
+  --navbar-height: 60px;
+  --text-size: 16px;
+  --icons-size: 18px;
+}
+
+
+
+@media screen and (min-width: 768px) {
+  :root {
+    --text-size: 18px;
+    --icons-size: 20px;
+  }
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.navbar {
+  background-color: #f0f0f0;
+  height: var(--navbar-height);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.navbar__logo {
+  padding-left: 15px;
+}
+
+.navbar__container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+}
+
+.navbar__logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar__logo-text {
+  font-size: var(--text-size);
+}
+
+.navbar__logo-icon {
+  font-size: var(--icons-size);
+}
+
+.navbar__list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #333;
+}
+.wrapper__products
+{color: black ;
+
+}
+.wrapper__product-btn{
+  border-radius: 15px;
+  background-color: rgba(33, 211, 66, 0.897);
+  color: rgb(3, 3, 2) ;
+  font-size: 14px;
+  position:relative;
+  top: 0;
+  border: none;
+  
+}
+
+.wrapper__product-btn-text{
+
+  font-style: italic;
+}
+
+.wrapper__title{
+  color: rgba(241, 225, 124, 0.87);
+}
+.wrapper__product-img-item{
+  border-radius: 15px;
+  width: 140px;
+  height: 140px;
+
+}
+.cart__item-img-item{border-radius: 200px;
+margin-left:0;
+height: 60%;
+width: 40%;
+border: blue;}
+
+
+.wrapper__product{display: flex;
+  gap: 18px;
+border:none;
+
+border-radius: 15px;}
+
+.wrapper__product-content{width: 50%;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+
+.wrapper__product-img{width: 50%;
+background-color: rgb(224, 237, 248);
+height: 180px;
+border-radius: 10px;}
+
+.wrapper__product-title{color: rgb(29, 186, 47);
+
+
+}
+
+.footer__copy-text{color: white;}
+
+/* Hasta */
+@media screen and (max-width: 768px) {
+
+
+
+  .navbar__nav {
+    position: absolute;
+    top: var(--navbar-height);
+    width: 100%;
+    left: 0;
+    background-color: #fff;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: 1;
+    transition: all .3s ease-in-out;
+  }
+
+  .navbar__list {
+    flex-direction: column;
+    opacity: 0;
+    height: 0;
+    transition: all .2s ease-in-out;
+  }
+}
+
+.navbar__nav.active {
+  padding: 20px 0;
+  height: auto;
+}
+
+.navbar__nav.active .navbar__list {
+  opacity: 1;
+  height: auto;
+}
+
+.navbar__btn {
+  padding-right: 15px;
+}
+
+.navbar__btn-link {
+  background-color: rgb(234, 172, 209);
+  border: none;
+  outline: none;
+  color: rgb(247, 243, 243);
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about {
+  background-image: url("../img/logo6.jpg");
+  background-size: 60px;
+  background-position: center;
+  padding: 20px;
+}
+
+.about__container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about__content {
+  width: 100%;
+  background-color: #e3ef39e8;
+  padding: 8px;
+  text-align: center;
+  border-radius: 30px;
+  opacity: 85%;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* border: 1px solid blueviolet; */
+}
+
+.wrapper__container {
+  color: white;
+  padding: 20px;
+
+}
+
+.wrapper__products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.wrapper__sidebar {
+  padding: 20px;
+  border-radius: 10px;
+  opacity: 85%;
+  background-color: rgb(152, 218, 52);
+  border: 1px solid lightgreen;
+}
+
+.footer {
+  background-color: #0e0e0ee8;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Desde */
+
+@media screen and (min-width: 500px) {
+  .about__content {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    flex-direction: row;
+  }
+
+  .wrapper__container {
+    width: 70%;
+  }
+
+  .wrapper__sidebar {
+    width: 30%;
+  }
+
+  .navbar__btn-link {
+    visibility: hidden;
+  }
+
+  .about__content {
+    width: 35%;
+  }
+}
